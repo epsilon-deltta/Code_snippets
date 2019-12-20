@@ -1,0 +1,39 @@
+package basic01;
+
+public class ThreadFactory {
+	int numOfThread,gap;
+	
+	public static boolean state=true;
+	public static int num;
+	public  int getNum() {
+		return num;
+	}
+	
+	public ThreadFactory(int numOfThread, int gap) {
+		this.numOfThread = numOfThread;
+		this.gap = gap;
+		threads =new CounterThread[numOfThread];
+		makeThreads();
+	}
+
+	CounterThread[] threads;
+	private void makeThreads() {
+		for (int j = 0; j < numOfThread; j++) {
+			threads[j]=new CounterThread(numOfThread,j,gap);
+		}
+	}
+	public void start() {
+		for (int j = 0; j < numOfThread; j++) {
+			threads[j].start();
+		}
+		
+	}
+	public void join() {
+		try {
+			threads[0].join();
+		} catch (InterruptedException e) {
+			System.out.println("join error");
+		}
+	}
+	
+}

@@ -1,0 +1,31 @@
+		
+		String[] names = { "long", "hao", "long haho", "long hao" };
+		// array => list => arraylist
+		// collections 이용해도 됨 when array=> arraylist
+		List<String> a = Arrays.asList(names);
+		ArrayList<String> arraylist = new ArrayList<String>(a);
+
+		// 추가
+		for (int i = 0; i < 5; i++) {
+			arraylist.add("added" + i);
+		}
+
+		// 나열 
+		//		iterator 과 enumerator (iterator 이 최신임 )
+		System.out.println("=================");
+		for (String string : arraylist) {
+			System.out.println(string);
+		}
+		System.out.println("=================");
+
+		Iterator<String> iterator = arraylist.iterator();
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+		System.out.println("=================");
+		//iterator 두번쨰는 안됨 다써서 ㅋ
+		System.out.println("second");
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+		System.out.println("the end");

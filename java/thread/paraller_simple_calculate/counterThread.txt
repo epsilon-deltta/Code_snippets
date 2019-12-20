@@ -1,0 +1,37 @@
+package basic01;
+
+public class CounterThread extends Thread{
+	int numOfThread ,ID, gap;
+
+	public CounterThread(int numOfThread, int iD, int gap) {
+		this.numOfThread = numOfThread;
+		this.ID = iD;
+		this.gap = gap;
+	}
+	
+	public void run() {
+		int count=ID*gap;
+		while(ThreadFactory.state) {
+			if(count==ThreadFactory.num) {
+				ThreadFactory.state=false;
+				show(count);
+				break;
+			}
+			if( (count/gap)% numOfThread != ID) {
+				count+= gap*(numOfThread-1);
+				continue;
+			}
+			System.out.println("thread"+ID+" :"+count);
+			count++;
+		}
+	}
+
+	private void show(int count) {
+		System.out.println("=====================");
+		System.out.println("my thread num is"+this.ID);
+		System.out.println("the number is "+ count);
+		System.out.println("=====================");
+	}
+	
+
+}

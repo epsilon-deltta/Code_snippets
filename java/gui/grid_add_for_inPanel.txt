@@ -1,0 +1,36 @@
+	int row =3;
+	int numOfbuttons=2;
+	private void shownorth() {
+		JPanel panel =new JPanel(new GridLayout(row, 0));
+		
+		JPanel [] panels =new JPanel[row];
+		JButton [][] buttons = new JButton[row][numOfbuttons];
+		JPanel [] cardPanels =new JPanel[row];
+		
+		for(int i=0;i<row;i++) {
+			panels[i]= new JPanel(new GridLayout(1, 0));
+			
+			for(int j=0;j<numOfbuttons;j++) {
+				switch(j) {
+				case 0:
+					buttons[i][j]=new JButton("start");
+					break;
+				case 1:
+					buttons[i][j]=new JButton("stop");
+					break;
+				default :
+					System.err.println("error");
+				}
+				panels[i].add(buttons[i][j]);
+			}
+			
+			cardPanels[i]= new JPanel(new CardLayout());
+			panels[i].add(cardPanels[i]);
+			
+			panel.add(panels[i]);
+		}
+
+
+		add(panel,BorderLayout.NORTH);
+		
+	}

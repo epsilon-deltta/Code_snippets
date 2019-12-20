@@ -1,0 +1,17 @@
+일반 구문
+
+Set WshShell = WScript.CreateObject("WScript.Shell")
+
+WshShell.Run "cmd /c mkdir C:\temp\SCCM"
+
+ 
+
+Slient 구문
+
+Set WshShell = WScript.CreateObject("WScript.Shell")
+
+return = WshShell.Run ("cmd /c mkdir C:\temp\SCCM" ,0 ,true)
+
+
+
+출처: https://rockball.tistory.com/entry/Vbscript-Cmd-명령어-수행방법?category=165134 [rockball]

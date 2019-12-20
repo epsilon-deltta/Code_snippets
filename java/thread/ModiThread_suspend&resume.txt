@@ -1,0 +1,40 @@
+class ModifiedThread extends Thread{
+	private boolean suspend=false;
+	public void _suspend() {
+		suspend=true;
+		System.out.println("i suspended");
+	}
+
+	public void _resume() {
+		suspend = false;
+		synchronized (this) {
+			notify();
+			System.out.println("i notified");
+		}
+	}
+
+	public void run() {
+		while (true) {
+			try {
+				sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			System.out.println(Thread.currentThread().getName() + " is executing");
+			System.out.println(suspend);
+			// wait
+			if (suspend) {
+				synchronized (this) {
+					try {
+						wait();
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			}
+
+		}
+	}
+}

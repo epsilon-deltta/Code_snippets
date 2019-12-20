@@ -1,0 +1,15 @@
+    public static final String filePath = "C:\\Users\\lovin\\test\\";
+    
+    public static void main(String[] args) throws IOException {
+        File iniFile = new File(filePath+"memory.ini");
+        
+        Ini ini = new Ini(iniFile);
+        Wini wini = new Wini(iniFile);
+
+        ini.get("log", "num") );
+        wini.put("log","num","312");
+        
+        wini.store();
+}
+
+https://jeong-pro.tistory.com/135

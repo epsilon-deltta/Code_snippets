@@ -1,0 +1,52 @@
+package sec04;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class BorderLayoutDemo extends JFrame {
+	BorderLayoutDemo() {
+		setTitle("º¸´õ ·¹ÀÌ¾Æ¿ô!");
+		setLayout(new BorderLayout());
+
+		showNorth();
+		showEast();
+		showCenter();
+		showWest();
+		showSouth();
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(300, 110);
+		setVisible(true);
+	}
+	public void showNorth() {
+		JPanel panel =new JPanel();
+		add(panel,BorderLayout.NORTH);
+	}
+
+	
+	public void showEast() {
+		JPanel panel =new JPanel();
+		add(panel,BorderLayout.EAST);
+	}
+	public void showCenter() {
+		JPanel panel =new JPanel();
+		add(panel,BorderLayout.CENTER);
+	}
+	public void showWest() {
+		JPanel panel =new JPanel();
+		add(panel,BorderLayout.WEST);
+	}
+
+	
+	public void showSouth() {
+		JPanel panel =new JPanel();
+		add(panel,BorderLayout.SOUTH);
+	}
+
+	public static void main(String[] args) {
+		new BorderLayoutDemo();
+	}
+}

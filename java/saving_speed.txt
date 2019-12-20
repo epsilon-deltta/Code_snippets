@@ -1,0 +1,10 @@
+		int startTime, lastTime;
+
+		startTime = (int) System.currentTimeMillis();
+		while (iterator.hasNext()) {
+			iterator.next();
+		}
+		lastTime = (int) System.currentTimeMillis();
+
+		lastTime = lastTime - startTime;
+		System.out.println(lastTime);

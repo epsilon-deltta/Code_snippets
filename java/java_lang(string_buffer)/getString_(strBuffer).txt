@@ -1,0 +1,3 @@
+		StringBuffer str = new StringBuffer("new");
+		String string = "testing";
+		str.replace(0, str.length(), string);

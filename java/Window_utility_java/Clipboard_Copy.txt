@@ -1,0 +1,10 @@
+void copyFunction(String str){
+		Toolkit toolkit = Toolkit.getDefaultToolkit();
+
+		Clipboard clipboard = toolkit.getSystemClipboard();
+
+		StringSelection strSel = new StringSelection(str);
+
+		clipboard.setContents(strSel, null);
+
+	}

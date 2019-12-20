@@ -1,0 +1,12 @@
+		
+=============================actionlistner 
+		ActionListener assi =new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+
+				switch(e.getActionCommand()) {
+				case "stop01" :
+					System.out.println("this is me!!");
+				}
+			}
+		};

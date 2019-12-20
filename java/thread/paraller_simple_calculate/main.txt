@@ -1,0 +1,19 @@
+public class Caculate_thread {
+	static int num=1000000;
+	static int numOfThread =5;
+	public static void main(String[] args) throws InterruptedException {
+		ThreadFactory threF =new ThreadFactory(numOfThread,100000);
+		ThreadFactory.num=num;
+		int startTime, lastTime;
+		startTime = (int) System.currentTimeMillis();
+		threF.start();
+		threF.join();
+		lastTime = (int) System.currentTimeMillis();
+
+		lastTime = lastTime - startTime;
+		System.out.println("totoal="+lastTime);
+		
+	}
+
+
+}
