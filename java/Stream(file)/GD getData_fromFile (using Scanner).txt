@@ -1,0 +1,15 @@
+		
+		String strPath="./test.txt";
+		Path path =Paths.get(strPath);
+		//if relative path = "str/asd/aa" then
+		//Path path=Paths.get(strpath,"asd","aa");
+	
+	try (
+			Scanner scan=new Scanner(new  FileInputStream(path.toFile() )  );
+			){
+		System.out.println(scan.nextInt());
+		System.out.println(scan.next()); //separator: space 
+		System.out.println(scan.nextLine()); //separator: \n 
+} catch (Exception e) {
+	
+}

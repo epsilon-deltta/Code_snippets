@@ -1,0 +1,2 @@
+			CreateWindow(TEXT("static"), TEXT("attack code"), WS_CHILD | WS_VISIBLE, 10, 10 + (60 * i), 100, 25, hWnd, (HMENU)-1,
+				hInst, NULL);

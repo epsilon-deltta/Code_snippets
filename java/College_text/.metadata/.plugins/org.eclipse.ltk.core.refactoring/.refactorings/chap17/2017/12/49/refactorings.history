@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;pstmt&apos; in &apos;sec05.DB3Demo.main(...)&apos; to &apos;stmt&apos;&#x0D;&#x0A;- Original project: &apos;chap17&apos;&#x0D;&#x0A;- Original element: &apos;sec05.DB3Demo.main(String[]).pstmt&apos;&#x0D;&#x0A;- Renamed element: &apos;pstmt&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;pstmt&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;sec05{DB3Demo.java[DB3Demo~main~\[QString;@pstmt!1179!1285!1197!1201!QPreparedStatement;!0!false" name="stmt" references="true" stamp="1512780356411" version="1.0"/>
+</session>

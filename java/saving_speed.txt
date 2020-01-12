@@ -7,4 +7,4 @@
 		lastTime = (int) System.currentTimeMillis();
 
 		lastTime = lastTime - startTime;
-		System.out.println(lastTime);
+		System.out.println(lastTime+"\n");

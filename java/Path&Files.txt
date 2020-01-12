@@ -1,9 +1,19 @@
+================path
+------  객체 생성 (경로 설정)
 		  Path path0 = Paths.get("")    
 		  //상대 경로 
 		  Path path1 = Paths.get("C:/Temp/dir/subdir");
 		  Path path2 = Paths.get("C:/Temp/file.txt");
 		  //절대경로
 
+------  path's method
+		        		System.out.println(path.toString());
+		System.out.println(path.toFile());
+		System.out.println(path.toUri());            \
+path method reference
+   https://m.blog.naver.com/PostView.nhn?blogId=horajjan&logNo=220484659082&proxyReferer=https%3A%2F%2Fwww.google.com%2F
+		  
+===================files 이용 (using path)
 		  //폴더 생성
 		  if(Files.notExists(path1)) {
 		   Files.createDirectories(path1);
@@ -14,7 +24,7 @@
 		  }
 
 
-================reference
+====================Files ex
 		System.out.println("[[디렉토리 여부]]: " + Files.isDirectory(path));
 
 		System.out.println("[[파일 여부]]: " + Files.isRegularFile(path));

@@ -1,0 +1,12 @@
+
+SetWindowText(hEdit,TEXT("STRING..."));
+	1param:window handle...............(1.1)
+	2param:string
+
+MoveWindow(hEdit,x,y,width,height,boolean)
+	last_Param:이 명령어후 wm_paint보낼건지 말건지 (boolean)
+	// After this command,wheather sending wm_paint or not
+
+ShowWindow(hEdit,SW_HIDE);
+	1param: (1.1)
+	2param: SW_HIDE or SW_SHOW 

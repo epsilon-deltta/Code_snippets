@@ -1,0 +1,10 @@
+		String WEB_DRIVER_ID = "webdriver.chrome.driver";
+		String WEB_DRIVER_PATH = "C:\\Users\\lovin\\convinience\\chromedriver_win32\\chromedriver.exe";
+		String url = "https://blog.naver.com/chr9990";
+		System.setProperty(WEB_DRIVER_ID, WEB_DRIVER_PATH);
+		WebDriver driver = new ChromeDriver();
+		driver.get(url);
+		
+		System.out.println(driver.getTitle());
+		System.out.println(driver.getPageSource());
+		driver.close();

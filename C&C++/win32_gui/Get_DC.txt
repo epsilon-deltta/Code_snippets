@@ -1,0 +1,8 @@
+HDC hdc;
+HWND hWnd;
+=========General method
+hdc=GetDC(hdc);
+ReleseDC(hdc,hWnd);
+=========method in WM_PAINT 
+PAINTSTRUCT ps;
+hdc=

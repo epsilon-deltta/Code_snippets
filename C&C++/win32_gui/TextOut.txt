@@ -1,0 +1,6 @@
+===================example=============
+			hdc = GetDC(hWnd);
+			TextOut(hdc, 10, 10, TEXT("THIS IS TEXT OUT"), 17);
+			ReleaseDC(hWnd, hdc);
+=======================================
+Textout(1.dc , 2.width , 3.height, 4.String ,5.count of String);
