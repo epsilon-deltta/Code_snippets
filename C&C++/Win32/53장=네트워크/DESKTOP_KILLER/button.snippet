@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>BUTTON</Title>
+    <Author>EPSILON</Author>
+    <Shortcut>button_win</Shortcut>
+    <Description>Generate button_createWindow</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>name</ID>
+        <Default>value</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="XML">
+      <![CDATA[<test>
+		CreateWindow(TEXT("button"),TEXT("Me Two"),WS_CHILD | WS_VISIBLE | 
+			BS_PUSHBUTTON,20,50,100,25,hWnd,(HMENU)1,g_hInst,NULL);</test>]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

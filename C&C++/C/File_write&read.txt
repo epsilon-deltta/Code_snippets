@@ -1,0 +1,18 @@
+	char buffer[20];    // 파일을 읽을 때 사용할 임시 공간
+	FILE* fp;
+	fopen_s(&fp,"test1.txt", "r");    // hello.txt 파일을 읽기 모드로 열기.  
+	if (fp == NULL) {
+		printf_s("this is error");
+		return 1;
+	}
+				  // 파일 포인터를 반환
+	int c=fgetc(fp)
+	fgets(buffer, sizeof(buffer), fp);    // hello.txt에서 문자열을 읽음
+ 	//fscanf(fp,"%s",string);  file에 space | \n 만날 때까지 읽기
+	
+	
+
+	//fprintf(fp,"asdfasdf %d",123);  file에 저장
+	fclose(fp);    // 파일 포인터 닫기
+
+	return 0;
