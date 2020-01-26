@@ -1,0 +1,17 @@
+<a href="url" referrerpolicy="${reffer_policy}">
+<meta name="referrer" content="${reffer_policy}">
+
+policy _type
+
+
+unsafe-url : all_path
+
+origin :taget에 domain 만보냄
+same origin :같은 도메인일때만 all_path	
+origin-when-cross-origin: samedomain=all_path,differDomain=domain
+
+strict-origin-when-cross-origin: sameDomain=all_path ,https=domain
+stric-origin :target_url 이 https 일때만
+
+no-referrer: 모두 x(같은 domain 도)
+no-referrer-when-downgrade :sameDomian=all_path https= all_path
