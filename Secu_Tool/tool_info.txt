@@ -3,3 +3,12 @@
 	seeker
 0x
 	crypter
+0x BACKDOOR
+ 	absolute Zero
+	JSRAT
+
+
+
+prevention __in opensource
+	OWASP dependency check   _ most java
+	Iotcube			 _ C/C++
