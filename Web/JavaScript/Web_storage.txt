@@ -1,0 +1,4 @@
+Web storage  --session storage
+	     --local   storage 
+
+	ex) localStorage.getItem("key")	

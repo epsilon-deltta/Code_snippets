@@ -1,14 +1,26 @@
-0x4c4f434154494f4e
+위치추적 웹 (막힘)
 	Trackurl
 	seeker
-0x
+암호화
 	crypter
-0x BACKDOOR
+BACKDOOR
  	absolute Zero
 	JSRAT
 
+vul·ner·a·bil·i·ty scanner
+	nessus
+web scanner
+	arachni
 
 
-prevention __in opensource
+secure prevention __in opensource
 	OWASP dependency check   _ most java
 	Iotcube			 _ C/C++
+
+proxy
+	burp suite
+	owasp-zap       ;sanner free
+	paros
+openproxy	
+	tor
+	kalitorify

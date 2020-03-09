@@ -1,0 +1,25 @@
+service postgresql start
+msfdb init
+
+msfconsole        //
+db_status
+db_nmap           //port scanning
+services          //show opened ports
+
+search [type:exploit name:%name% platform:windows ]
+search -h 	  //
+
+use %module%      //
+show options      //
+set lhost %value% //
+run		  //
+
+ctrl+z            //session 끄지않고 나가기
+
+sessions
+	 -i %num% //session 진입
+	 -k %num% //session 종류
+	 -v       //detail content
+sessions -h	
+
+
