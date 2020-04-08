@@ -1,0 +1,1 @@
+local_machine\software\Polices\Microsoft\WindowsDefender

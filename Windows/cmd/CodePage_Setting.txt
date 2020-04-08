@@ -1,0 +1,5 @@
+Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\CodePage
+KEY: OEMCP
+UTF-8:65001
+
+after that , we can check this using "chcp" in cmd

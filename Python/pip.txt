@@ -1,0 +1,3 @@
+pip install [package_name]
+pip list //pip로 설치한 패키지
+pip show [package_name] //패키지 installed된 위치 및 패키지 설명

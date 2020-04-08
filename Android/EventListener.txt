@@ -1,0 +1,47 @@
+public class MainActivity extends AppCompatActivity {
+    TextView num_textView;
+    TextView url_textView;
+    Button activity2_btn;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        num_textView = (TextView)findViewById(R.id.num_textView);
+        url_textView = (TextView)findViewById(R.id.url_textView);
+
+        activity2_btn = (Button)findViewById(R.id.activity2_btn);
+
+        num_textView.setOnClickListener(mClickListener);
+        url_textView.setOnClickListener(mClickListener);
+
+        activity2_btn.setOnClickListener(mClickListener);
+
+
+
+    }
+
+    View.OnClickListener mClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+                switch (v.getId()){
+
+                    case R.id.num_textView :
+                        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+num_textView.getText().toString()));
+                        startActivity(intent);
+                        break;
+
+
+
+                    case R.id.url_textView :
+                        Intent intent2 = new Intent(Intent.ACTION_VIEW, Uri.parse(url_textView.getText().toString()));
+                        startActivity(intent2);
+                        break;
+
+                    case R.id.activity2_btn :
+                        Intent intent3 = new Intent(MainActivity.this,Main2Activity.class);
+                        startActivity(intent3);
+                        break;
+                }
+        }
+    };
+}
