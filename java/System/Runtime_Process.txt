@@ -1,0 +1,12 @@
+
+	public static void main(String[] args) throws IOException, InterruptedException {
+		String command="notepad"; //environment_variable에 저장된 program
+		Runtime runtime =Runtime.getRuntime();
+		Process process =runtime.exec(command);
+		
+		process.waitFor();
+		//waitfor 생성한 프로그램 끝날때까지 대기
+		//process.destroy(); 생성한 프로그램 끝냄
+		//System.exit(0); 생성한 프로그램은 냅두고 자기만 종료
+		
+	

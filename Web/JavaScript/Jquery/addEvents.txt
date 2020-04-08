@@ -1,0 +1,10 @@
+<script>
+    $('#target').on({
+        'focus' : function(e){
+ 
+        }, 
+        'blur' : function(e){
+             
+        }
+    })
+</script>

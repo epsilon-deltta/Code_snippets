@@ -1,0 +1,36 @@
+package Crawling_testing;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class Parser {
+	private static String Address;
+	private static URL Url;
+	private static BufferedReader br;
+	private static HttpURLConnection con;
+	private static String protocol = "GET";
+
+	public static void main(String[] args) throws IOException {
+		Address = "http://verte.dothome.co.kr";
+		try {
+			Url = new URL(Address);
+			con = (HttpURLConnection) Url.openConnection();
+//			System.out.println(con.getHeaderFields());
+			con.setRequestMethod(protocol);
+			con.setRequestProperty("User-Agent", "Mozilla/5.0");
+			br = new BufferedReader(new InputStreamReader(con.getInputStream(), "UTF-8"));
+			String temp;
+			while ((temp = br.readLine()) != null) {
+				System.out.println(temp);
+			}
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+		br.close();
+	}
+
+}
