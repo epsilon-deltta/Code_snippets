@@ -1,0 +1,49 @@
+>Taking from DATA_OCEAN !!
+Document doc =Jsoup.parse(html);
+Document doc =Jsoup.connect("https://follow.me").get
+Document doc = Jsoup.connect("http://example.com") 
+.data("query","Java").userAgent("Mozilla")
+.cookie("auth", "token").timeout(3000).post();
+
+Element body =doc.body();
+String tittle=doc.tittle();
+
+>Select //filtering
+doc.select("a")
+doc.select("#id")
+doc.select(".class)
+doc.select("[href]")
+doc.select("[width=500]")
+
+doc.select("div").select(".head").select("[width=500]");
+
+Elements
+Element
+
+* attr(String key) 로 속성의 값을 얻습니다. attr(String key, String value)로 속성의 각을 설정할 수 있습니다.
+* id(), className() 은 id와 class속성의 값을 가져옵니다. class는 여러개 지정되면 하나의 문자열로 반환됩니다.  예로 요소가 <div class="center red"> 라면 className() 은 "center red" 를 반환합니다. 하나씩 구하기 위해서는 classNames() 메소드를 사용합니다. Set<String> 타입으로 반환합니다.
+* text()로 순수 텍스트만 구합니다. text(String value)로 요소의 텍스트를 설정할 수 있습니다.
+* html()로 html 문자열을 구합니다. html(String value) 메소드로 inner HTML 을 설정합니다.
+* outerHtml() 요소의 outer html을 반환합니다.
+
+첫번째 태그
+Elements imgs = doc.getElementByTag("img");
+if(imgs.size() > 0) {
+    String src = imgs.get(0).attr("src');
+}
+
+조건 
+eles.select("조건").isEmpty()
+
+========two path assembler process
+http://contents.kocw.or.kr/contents4/document/lec/2013/Gachon/Lee%20Sangsun/4.pdf
+arXiv
+java ramda ::
+https://cornswrold.tistory.com/326
+
+http://www.ave3737.com/#/
+=========
+decoder & sequencer
+https://nullmind.tistory.com/entry/%EC%A0%9C%EC%96%B4-%EC%9C%A0%EB%8B%9BControl-Unit-1
+sequencer
+https://slidesplayer.org/slide/11701340/
