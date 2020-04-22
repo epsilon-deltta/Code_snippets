@@ -1,0 +1,6 @@
+	String str="sfas;dfasdf;asdfas;dfasd;fasdf;asdf;asdfasdf";
+		StringTokenizer tokens =new StringTokenizer(str,";");
+		while(tokens.hasMoreElements()) {
+			System.out.println(tokens.nextToken());
+		}
+		
