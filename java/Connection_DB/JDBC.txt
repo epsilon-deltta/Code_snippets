@@ -1,0 +1,23 @@
+	try {
+			Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3307/power_set", "root", "root");
+			Statement state = con.createStatement();
+			//Query
+			state.execute("INSERT INTO cartesian(cartesian.id,cartesian.price,cartesian.name) VALUES(79,3,'for_testing');" );
+			//Select Query
+			ResultSet result = state.executeQuery(
+					"select * from cartesian");
+			while (result.next()) {
+				System.out.println("n : " + result.getInt("n") + "| id : " + result.getInt("id"));
+			}
+			//Insert ,Delect
+			String sql = "INSERT INTO cartesian(cartesian.id,cartesian.price,cartesian.name) VALUES(?,?,?);";
+			PreparedStatement prestate = con.prepareStatement(sql);
+			
+			prestate.setInt(1, 333);
+			prestate.setInt(2, 333);
+			prestate.setString(3, "JDBC COMMMING !");
+			prestate.executeUpdate();
+			System.out.println("cheong gong le!");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}

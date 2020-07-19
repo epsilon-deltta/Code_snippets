@@ -1,0 +1,15 @@
+		DescriptiveStatistics stats = new DescriptiveStatistics();
+		DescriptiveStatistics stats_roulette = new DescriptiveStatistics();
+		for( int i = 0; i < size; i++) {
+	        stats		  .addValue(tournament200gen.get(i) );
+	        stats_roulette.addValue(roulette200gen.get(i) );
+		}
+		System.out.println("===tour  : roulette");
+		
+		System.out.println("last  "+tournament200gen.get(size-1)+" :"+roulette200gen.get(size-1));
+		System.out.println("Max  "+stats.getMax()+" :"+stats_roulette.getMax());
+		System.out.println("Min  "+stats.getMin()+" :"+stats_roulette.getMin());
+		System.out.println("Mean "+stats.getMean()+" :"+stats_roulette.getMean());
+		System.out.println("Mean "+stats.getMean()+" :"+stats_roulette.getGeometricMean());
+		System.out.println("StandardDeviation "+stats.getStandardDeviation()+" :"+stats_roulette.getStandardDeviation());
+		
